@@ -1,6 +1,9 @@
 <h1> Decision trees as a computational model for mental heuristics in human decision-making: a study of poker duels
 
+ ### [Project Report](https://drive.google.com/file/d/1kzSpuYn2CBFP_Y5qcQrWPmEzANEyOyiU/view?usp=sharing)
+
 <h2>Description</h2>
+
 In Texas Hold'em Poker, it is often said that “you don’t play the cards, you play the players”. This implies that choices which may be correct against one player could be incorrect against another. Some computer models have validated this idea by implementing opponent modeling [1,2]. These models, instead of just making decisions based on the current game state, model the decision making process of the opponent, so that they can exploit their specific weaknesses. 
 
 However, it is one thing to say that opponent modeling is a strategy that works, and a completely different thing to claim that professional poker players are actually performing the mental operation of modeling their opponents. So how can we tell if professional poker players are actually modeling the way their opponents play? It could perfectly be the case that they think they are playing the player and not the cards, but that they really play same against all of their opponents without realizing it. I propose modeling the decision-making process of professional poker players with decision trees to study this. Comparing the resulting tree structure from training the algorithm in relevant datasets could give us an insight into how professional poker players play the game.
@@ -12,10 +15,13 @@ Using TensorFlow's dataforest package, I was able to generate decision trees for
 <p align="center">
   <img src="https://i.imgur.com/6LuyXb7.png" height="90%" width="90%" alt="Poster"/>
 
-These results are very encouraging because there are very significant differences between both decision trees. The most notable one is that in the Hellmuth vs Negreanu tree, the second layer of the tree shows us that Hellmuth is more likely to raise in either high or low card rankings, but more likely to check in intermediate hand rankings. This makes sense because if you have high chances of winning, you want to maximize your profits. Similarly, if your hand is bad but you don't want to lose money, sometimes you want to bluff, so you raise. However, Hellmuth does not follow the same behavior when playing versus Dwan. In the Hellmuth vs Dwan tree, the second layer shows us that whenever Hellmuth's hand ranking was bad, his preferred option was folding, showing he is less willing to bluff Dwan than he is to bluff Negreanu. 
+These results are very encouraging because there are very significant differences between both decision trees. The most notable one is that in the Hellmuth vs Negreanu tree, the second layer of the tree shows us that Hellmuth is more likely to raise in either high or low card rankings, but more likely to check in intermediate hand rankings. This makes sense because if you have high chances of winning, you want to maximize your profits. Similarly, if your hand is bad but you don't want to lose money, sometimes you want to bluff, so you raise. However, Hellmuth does not follow the same behavior when playing versus Dwan. In the Hellmuth vs Dwan tree, the second layer shows us that whenever Hellmuth's hand ranking was bad, his preferred option was checking, showing he is less willing to bluff Dwan than he is to bluff Negreanu. This, along with several other findings which can be found in the attached project report, allow us to support the hypothesis that  professional poker players do in fact take into account the playstyle of their opponents when evaluating what decision to make.
+
+While this project only had about 140 data points, and had a very simple design, it is a very important proof of concept: it shows how useful decision trees can be used to study human decision-making. 
 
 
-
+<h2>Acknowledgements</h2>
+This short paper was one of three class projects I did for COGS 316 at CWRU: Decision-Making, which was taught by Dr. Mark Turner.
 
 
 <h2>References</h2>
