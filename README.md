@@ -1,4 +1,4 @@
-<h1> Decision trees as a computational model for mental heuristics in human decision-making: a study of poker duels
+<h1> Using decision trees to model mental heuristics in human decision-making: a study of poker duels
 
  ### [Project Report](https://drive.google.com/file/d/1WWx1x8AoqdKrHKtVnhnl1jcC7N3sLFgA/view?usp=sharing)
 
